@@ -1,0 +1,8 @@
+spark-submit main.py
+
+-- If there are permission issues with /user directory of hadoop filesytem for ec2-user then run the folling commands
+[ec2-user]$ sudo -u hdfs hadoop fs -ls -al
+
+-- Once you verify the issue is with directory ownership of /user, change the ownership 
+[ec2-user]$ sudo -u hdfs hadoop fs -chown ec2-user /user
+
